@@ -82,7 +82,7 @@ async function loadInitialData(sClass) {
         }
 
         $(`#${sClass} .min-stake-amount`).html(minA);
-        $(`#${sClass} .max-stake-amount`).html(`${(15000000).toLocaleString()} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
+        $(`#${sClass} .max-stake-amount`).html(`${(100000000).toLocaleString()} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
 
         let isStakingPaused = await cObj.methods.getStakingStatus().call();
         let isStakingPausedText;
